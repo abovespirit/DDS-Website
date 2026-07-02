@@ -1,0 +1,6 @@
+/* Dance Dimensions of SWFL — media from dancedimensionsswfl.com */
+:root {
+    --dds-hero: url('images/hero-1.jpg');
+    --dds-hero-alt: url('images/hero-2.jpg');
+    --dds-hero-studio: url('images/hero-3.jpg');
+}

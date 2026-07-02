@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance Dimensions — Timetable</title>
+    <link rel="stylesheet" href="assets.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-info">
+                <span class="top-bar-item">Welcome to Dance Dimensions of SWFL — <a href="mailto:ddswfl@aol.com">ddswfl@aol.com</a></span>
+                <span class="top-bar-item">Northeast Cape Coral, Florida</span>
+            </div>
+            <a href="contact.html" class="sign-up-btn">get started</a>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo-wide-crop.png" alt="Dance Dimensions of SWFL" class="logo-img">
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="classes.html" class="active">Classes</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="classes.html">Class Types</a></li>
+                        <li><a href="dress-code.html">Dress Code</a></li>
+                        <li><a href="schedule.html" class="active">Schedule</a></li>
+                    </ul>
+                </li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li class="dropdown">
+                    <a href="recital.html">Recital</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="recital-music.html">Recital Music</a></li>
+                        <li><a href="recital-dates.html">Important Dates</a></li>
+                        <li><a href="rehearsal-schedule.html">Rehearsal Schedules</a></li>
+                        <li><a href="recital-hair-makeup.html">Recital Hair &amp; Make Up</a></li>
+                        <li><a href="recital-practice-videos.html">Recital Practice Videos</a></li>
+                        <li><a href="recital-gifts.html">Recital Gifts</a></li>
+                        <li><a href="show-day-details.html">Show Day Details</a></li>
+                    </ul>
+                </li>
+                <li><a href="show-troupe.html">Show Troupe</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="schedule-section">
+        <div class="schedule-container">
+            <div class="schedule-header">
+                <span class="schedule-label">Schedule</span>
+                <h2 class="schedule-title">Class Schedule by Age</h2>
+            </div>
+
+            <div class="timetable-filters">
+                <button class="filter-btn active" data-view="preschool">Preschool</button>
+                <button class="filter-btn" data-view="elementary">Elementary</button>
+                <button class="filter-btn" data-view="teens">Teens</button>
+            </div>
+
+            <div class="timetable-view active" id="view-preschool">
+                <div class="timetable-table-wrap">
+                    <table class="timetable-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                                <th>Saturday</th>
+                                <th>Sunday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="time-slot">4 - 5</td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td></tr>
+                            <tr><td class="time-slot">5 - 6</td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td></tr>
+                            <tr><td class="time-slot">6 - 7</td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td></tr>
+                            <tr><td class="time-slot">7 - 8</td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td></tr>
+                            <tr><td class="time-slot">8 - 9</td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="timetable-mobile">
+                    <div class="mobile-day"><h3 class="mobile-day-title">Monday</h3><ul class="mobile-day-list"><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">4 - 5</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">5 - 6</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">6 - 7</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">7 - 8</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">8 - 9</span></li></ul></div>
+                    <div class="mobile-day"><h3 class="mobile-day-title">Tuesday</h3><ul class="mobile-day-list"><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">4 - 5</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">5 - 6</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">6 - 7</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">7 - 8</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">8 - 9</span></li></ul></div>
+                    <div class="mobile-day"><h3 class="mobile-day-title">Wednesday</h3><ul class="mobile-day-list"><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">4 - 5</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">5 - 6</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">6 - 7</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">7 - 8</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">8 - 9</span></li></ul></div>
+                    <div class="mobile-day"><h3 class="mobile-day-title">Thursday</h3><ul class="mobile-day-list"><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">4 - 5</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">5 - 6</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">6 - 7</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">7 - 8</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">8 - 9</span></li></ul></div>
+                    <div class="mobile-day mobile-day--closed"><h3 class="mobile-day-title">Friday</h3><p class="mobile-day-closed">Closed</p></div>
+                    <div class="mobile-day mobile-day--closed"><h3 class="mobile-day-title">Saturday</h3><p class="mobile-day-closed">Closed</p></div>
+                    <div class="mobile-day mobile-day--closed"><h3 class="mobile-day-title">Sunday</h3><p class="mobile-day-closed">Closed</p></div>
+                </div>
+            </div>
+
+            <div class="timetable-view" id="view-elementary">
+                <div class="timetable-table-wrap">
+                    <table class="timetable-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                                <th>Saturday</th>
+                                <th>Sunday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="time-slot">4 - 5</td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td></tr>
+                            <tr><td class="time-slot">5 - 6</td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td></tr>
+                            <tr><td class="time-slot">6 - 7</td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td></tr>
+                            <tr><td class="time-slot">7 - 8</td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td></tr>
+                            <tr><td class="time-slot">8 - 9</td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="timetable-mobile">
+                    <div class="mobile-day"><h3 class="mobile-day-title">Monday</h3><ul class="mobile-day-list"><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">4 - 5</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">5 - 6</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">6 - 7</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">7 - 8</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">8 - 9</span></li></ul></div>
+                    <div class="mobile-day"><h3 class="mobile-day-title">Tuesday</h3><ul class="mobile-day-list"><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">4 - 5</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">5 - 6</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">6 - 7</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">7 - 8</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">8 - 9</span></li></ul></div>
+                    <div class="mobile-day"><h3 class="mobile-day-title">Wednesday</h3><ul class="mobile-day-list"><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">4 - 5</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">5 - 6</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">6 - 7</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">7 - 8</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">8 - 9</span></li></ul></div>
+                    <div class="mobile-day"><h3 class="mobile-day-title">Thursday</h3><ul class="mobile-day-list"><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">4 - 5</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">5 - 6</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">6 - 7</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">7 - 8</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">8 - 9</span></li></ul></div>
+                    <div class="mobile-day mobile-day--closed"><h3 class="mobile-day-title">Friday</h3><p class="mobile-day-closed">Closed</p></div>
+                    <div class="mobile-day mobile-day--closed"><h3 class="mobile-day-title">Saturday</h3><p class="mobile-day-closed">Closed</p></div>
+                    <div class="mobile-day mobile-day--closed"><h3 class="mobile-day-title">Sunday</h3><p class="mobile-day-closed">Closed</p></div>
+                </div>
+            </div>
+
+            <div class="timetable-view" id="view-teens">
+                <div class="timetable-table-wrap">
+                    <table class="timetable-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Monday</th>
+                                <th>Tuesday</th>
+                                <th>Wednesday</th>
+                                <th>Thursday</th>
+                                <th>Friday</th>
+                                <th>Saturday</th>
+                                <th>Sunday</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="time-slot">4 - 5</td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td></tr>
+                            <tr><td class="time-slot">5 - 6</td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td></tr>
+                            <tr><td class="time-slot">6 - 7</td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td></tr>
+                            <tr><td class="time-slot">7 - 8</td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td></tr>
+                            <tr><td class="time-slot">8 - 9</td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell"><div class="timetable-event timetable-event--tba"><span class="event-name">TBA</span><span class="event-time"><span>TBA</span></span><span class="event-instructor">TBA</span></div></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td><td class="timetable-cell empty"></td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="timetable-mobile">
+                    <div class="mobile-day"><h3 class="mobile-day-title">Monday</h3><ul class="mobile-day-list"><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">4 - 5</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">5 - 6</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">6 - 7</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">7 - 8</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">8 - 9</span></li></ul></div>
+                    <div class="mobile-day"><h3 class="mobile-day-title">Tuesday</h3><ul class="mobile-day-list"><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">4 - 5</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">5 - 6</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">6 - 7</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">7 - 8</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">8 - 9</span></li></ul></div>
+                    <div class="mobile-day"><h3 class="mobile-day-title">Wednesday</h3><ul class="mobile-day-list"><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">4 - 5</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">5 - 6</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">6 - 7</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">7 - 8</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">8 - 9</span></li></ul></div>
+                    <div class="mobile-day"><h3 class="mobile-day-title">Thursday</h3><ul class="mobile-day-list"><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">4 - 5</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">5 - 6</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">6 - 7</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">7 - 8</span></li><li><span class="mobile-event-name">TBA</span><span class="mobile-event-time">8 - 9</span></li></ul></div>
+                    <div class="mobile-day mobile-day--closed"><h3 class="mobile-day-title">Friday</h3><p class="mobile-day-closed">Closed</p></div>
+                    <div class="mobile-day mobile-day--closed"><h3 class="mobile-day-title">Saturday</h3><p class="mobile-day-closed">Closed</p></div>
+                    <div class="mobile-day mobile-day--closed"><h3 class="mobile-day-title">Sunday</h3><p class="mobile-day-closed">Closed</p></div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <h4 class="footer-social-heading">Let's Get Social:</h4>
+            <ul class="footer-social-bar" aria-label="Social Bar">
+                <li>
+                    <a href="https://www.facebook.com/DanceDimensionsOfSwfl" target="_blank" rel="noopener noreferrer" aria-label="facebook-Icon">
+                        <img src="images/icon-facebook.png" srcset="images/icon-facebook.png 1x, images/icon-facebook.png 2x" alt="facebook-Icon" width="39" height="39" loading="lazy">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/dds_dance_swfl/" target="_blank" rel="noopener noreferrer" aria-label="InstaPink">
+                        <img src="images/icon-instagram.png" srcset="images/icon-instagram.png 1x, images/icon-instagram.png 2x" alt="InstaPink" width="39" height="39" loading="lazy">
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:ddswfl@aol.com" aria-label="Email-Icon">
+                        <img src="images/icon-email.png" srcset="images/icon-email.png 1x, images/icon-email.png 2x" alt="Email-Icon" width="39" height="39" loading="lazy">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p class="copyright">DANCE DIMENSIONS OF SWFL &bull; Cape Coral, FL &bull; <a href="mailto:ddswfl@aol.com">ddswfl@aol.com</a><br>&copy; 2026 Dance Dimensions. All rights reserved.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dance Dimensions - Contact</title>
+    <link rel="stylesheet" href="assets.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div class="top-bar-info">
+                <span class="top-bar-item">Welcome to Dance Dimensions of SWFL — <a href="mailto:ddswfl@aol.com">ddswfl@aol.com</a></span>
+                <span class="top-bar-item">Northeast Cape Coral, Florida</span>
+            </div>
+            <a href="contact.html" class="sign-up-btn">get started</a>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/logo-wide-crop.png" alt="Dance Dimensions of SWFL" class="logo-img">
+            </a>
+            <button class="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li class="dropdown">
+                    <a href="classes.html">Classes</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="classes.html">Class Types</a></li>
+                        <li><a href="dress-code.html">Dress Code</a></li>
+                        <li><a href="schedule.html">Schedule</a></li>
+                    </ul>
+                </li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li class="dropdown">
+                    <a href="recital.html">Recital</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="recital-music.html">Recital Music</a></li>
+                        <li><a href="recital-dates.html">Important Dates</a></li>
+                        <li><a href="rehearsal-schedule.html">Rehearsal Schedules</a></li>
+                        <li><a href="recital-hair-makeup.html">Recital Hair &amp; Make Up</a></li>
+                        <li><a href="recital-practice-videos.html">Recital Practice Videos</a></li>
+                        <li><a href="recital-gifts.html">Recital Gifts</a></li>
+                        <li><a href="show-day-details.html">Show Day Details</a></li>
+                    </ul>
+                </li>
+                <li><a href="show-troupe.html">Show Troupe</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <span class="page-header-subtitle">Get in Touch</span>
+            <h1>Contact Us</h1>
+            <p>Dance Dimensions of SWFL</p>
+        </div>
+    </header>
+
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h2>Studio Information</h2>
+                    <div class="info-item">
+                        <h3>Location</h3>
+                        <p>Northeast Cape Coral, Florida</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Email</h3>
+                        <p><a href="mailto:ddswfl@aol.com">ddswfl@aol.com</a></p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Social Media</h3>
+                        <p>Follow us for updates and highlights!</p>
+                        <ul class="footer-social-bar contact-social-bar" aria-label="Social Bar">
+                            <li>
+                                <a href="https://www.facebook.com/DanceDimensionsOfSwfl" target="_blank" rel="noopener noreferrer" aria-label="facebook-Icon">
+                                    <img src="images/icon-facebook.png" srcset="images/icon-facebook.png 1x, images/icon-facebook.png 2x" alt="facebook-Icon" width="39" height="39" loading="lazy">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/dds_dance_swfl/" target="_blank" rel="noopener noreferrer" aria-label="InstaPink">
+                                    <img src="images/icon-instagram.png" srcset="images/icon-instagram.png 1x, images/icon-instagram.png 2x" alt="InstaPink" width="39" height="39" loading="lazy">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="mailto:ddswfl@aol.com" aria-label="Email-Icon">
+                                    <img src="images/icon-email.png" srcset="images/icon-email.png 1x, images/icon-email.png 2x" alt="Email-Icon" width="39" height="39" loading="lazy">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h2>Send Us a Message</h2>
+                    <p class="contact-form-notice contact-form-notice--success" id="contact-form-success" hidden role="status">
+                        Thank you! Your message was sent. We&rsquo;ll get back to you soon.
+                    </p>
+                    <form id="contact-form" action="https://formsubmit.co/ddswfl@aol.com" method="POST">
+                        <input type="hidden" name="_subject" id="form-subject" value="Dance Dimensions website — new contact message">
+                        <input type="hidden" name="_next" id="form-next" value="">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="text" name="_honey" class="contact-form-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" autocomplete="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" autocomplete="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" autocomplete="tel">
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="">Select a topic</option>
+                                <option value="General Inquiry">General Inquiry</option>
+                                <option value="Class Information">Class Information</option>
+                                <option value="Registration">Registration</option>
+                                <option value="Show Troupe">Show Troupe</option>
+                                <option value="Recital Questions">Recital Questions</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="hours-section">
+                <h2>Studio Hours</h2>
+                <div class="hours-grid">
+                    <div class="hours-item">
+                        <h3>Monday – Thursday</h3>
+                        <p>4PM till 9PM</p>
+                    </div>
+                    <div class="hours-item">
+                        <h3>Friday – Sunday</h3>
+                        <p>Closed</p>
+                    </div>
+                </div>
+                <p class="hours-note"><strong>Note:</strong> Office hours may vary during holidays and summer months. Please check our classes and schedule page for the most up-to-date schedule.</p>
+            </div>
+
+            <div class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <h3>How do I register for classes?</h3>
+                    <p>Registration information is available on our Current Classes page. We recommend registering early as classes fill up quickly.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What age groups do you serve?</h3>
+                    <p>We offer dance classes to all skill and ability levels from age 2 through 18.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What dance genres do you teach?</h3>
+                    <p>We teach jazz, ballet, tap, hip hop, contemporary, lyrical, and acro.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Is Dance Dimensions a competitive studio?</h3>
+                    <p>No, we are a non-competitive dance studio focused on building confidence and fostering a lifelong love of dance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-inner">
+            <h4 class="footer-social-heading">Let's Get Social:</h4>
+            <ul class="footer-social-bar" aria-label="Social Bar">
+                <li>
+                    <a href="https://www.facebook.com/DanceDimensionsOfSwfl" target="_blank" rel="noopener noreferrer" aria-label="facebook-Icon">
+                        <img src="images/icon-facebook.png" srcset="images/icon-facebook.png 1x, images/icon-facebook.png 2x" alt="facebook-Icon" width="39" height="39" loading="lazy">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/dds_dance_swfl/" target="_blank" rel="noopener noreferrer" aria-label="InstaPink">
+                        <img src="images/icon-instagram.png" srcset="images/icon-instagram.png 1x, images/icon-instagram.png 2x" alt="InstaPink" width="39" height="39" loading="lazy">
+                    </a>
+                </li>
+                <li>
+                    <a href="mailto:ddswfl@aol.com" aria-label="Email-Icon">
+                        <img src="images/icon-email.png" srcset="images/icon-email.png 1x, images/icon-email.png 2x" alt="Email-Icon" width="39" height="39" loading="lazy">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p class="copyright">DANCE DIMENSIONS OF SWFL &bull; Cape Coral, FL &bull; <a href="mailto:ddswfl@aol.com">ddswfl@aol.com</a><br>&copy; 2026 Dance Dimensions. All rights reserved.</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
