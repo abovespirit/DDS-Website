@@ -4174,15 +4174,55 @@ footer .copyright a:hover {
 
     .home-page .content-slider-section.welcome-feature {
         padding: 0;
+        overflow-x: clip;
+        max-width: 100%;
     }
 
-.home-page .content-slider-section.welcome-feature {
-    overflow: visible;
-}
+    .home-page .welcome-feature .content-slide-content {
+        overflow-x: clip;
+        max-width: 100%;
+        min-width: 0;
+        box-sizing: border-box;
+    }
 
-.home-page .welcome-feature .content-slide-content {
-    overflow: visible;
-}
+    .home-page .welcome-feature .content-slide {
+        max-width: 100%;
+        min-width: 0;
+    }
+
+    .home-page .welcome-feature .content-slide-image {
+        max-width: 100%;
+        min-width: 0;
+        min-height: 0;
+    }
+
+    .home-page .welcome-feature .content-slide-label {
+        font-size: clamp(36px, 11vw, 90px);
+        max-width: 100%;
+    }
+
+    .home-page .welcome-feature .content-slide-title {
+        font-size: clamp(14px, 3.8vw, 28px);
+        letter-spacing: clamp(2px, 1.2vw, 8px);
+        max-width: 100%;
+        white-space: normal;
+        overflow-wrap: break-word;
+    }
+
+    .home-page .welcome-feature .content-slide-text,
+    .home-page .welcome-feature .content-slide-actions {
+        max-width: 100%;
+    }
+
+    .home-page #modern-dance-section .content-slide-image,
+    .home-page #modern-dance-section .content-slide-content {
+        grid-column: 1;
+        grid-row: auto;
+    }
+
+    .home-page #modern-dance-section .content-slide-content {
+        border-left: none;
+    }
 
     .home-page #feature-slider {
         height: auto;
