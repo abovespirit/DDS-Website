@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     initMobileNav();
+    initBackgroundVideos();
     initHeroSlider();
     initScrollReveal();
     initHomePageNav();
@@ -8,6 +9,58 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initRecitalCarousel();
 });
+
+const HERO_VIDEO_SRC = 'images/heroes/dds-website-video.mp4';
+
+function createBackgroundVideo() {
+    const video = document.createElement('video');
+    video.className = 'bg-video';
+    video.autoplay = true;
+    video.muted = true;
+    video.defaultMuted = true;
+    video.loop = true;
+    video.playsInline = true;
+    video.setAttribute('playsinline', '');
+    video.setAttribute('muted', '');
+    video.setAttribute('aria-hidden', 'true');
+    video.preload = 'auto';
+
+    const source = document.createElement('source');
+    source.src = HERO_VIDEO_SRC;
+    source.type = 'video/mp4';
+    video.appendChild(source);
+
+    const tint = document.createElement('div');
+    tint.className = 'bg-video-tint';
+    tint.setAttribute('aria-hidden', 'true');
+
+    return { video, tint };
+}
+
+function ensureMutedPlayback(video) {
+    video.muted = true;
+    video.volume = 0;
+    const play = () => {
+        const attempt = video.play();
+        if (attempt && typeof attempt.catch === 'function') {
+            attempt.catch(() => {});
+        }
+    };
+    play();
+    video.addEventListener('loadeddata', play, { once: true });
+}
+
+function initBackgroundVideos() {
+    document.querySelectorAll('.page-header').forEach(header => {
+        if (header.querySelector('.bg-video')) return;
+        const { video, tint } = createBackgroundVideo();
+        header.prepend(tint);
+        header.prepend(video);
+        ensureMutedPlayback(video);
+    });
+
+    document.querySelectorAll('.hero-slider .bg-video').forEach(ensureMutedPlayback);
+}
 
 function initTimetableFilters() {
     document.querySelectorAll('.timetable-filters').forEach(filterBar => {

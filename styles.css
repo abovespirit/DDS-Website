@@ -22,7 +22,7 @@
     --photo-ratio: 4 / 5;
     --photo-max: 520px;
     --photo-banner-height: 360px;
-    --frame-border: 1px solid var(--accent-light);
+    --frame-border: 3px solid var(--accent-light);
     --frame-shadow: 0 16px 38px rgba(40, 20, 40, 0.14);
     --frame-pad: 10px;
     --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
@@ -194,6 +194,22 @@ a {
 
 .top-bar-item a:hover {
     border-bottom-color: var(--white);
+}
+
+.home-announce-bar {
+    background-color: var(--accent);
+    color: var(--white);
+    text-align: center;
+    padding: 14px clamp(20px, 3vw, 40px);
+    font-family: var(--font-sans);
+    font-size: clamp(13px, 1.6vw, 16px);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.home-announce-bar p {
+    margin: 0;
 }
 
 .sign-up-btn {
@@ -415,12 +431,39 @@ a {
     right: 0;
 }
 
+/* ---- Background video (hero + page headers) ---- */
+.bg-video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.bg-video-tint {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(50, 65, 87, 0.42) 0%,
+            rgba(236, 58, 139, 0.22) 48%,
+            rgba(17, 17, 17, 0.62) 100%
+        );
+}
+
 /* ---- Hero Slider ---- */
 .hero-slider {
     position: relative;
     height: 92vh;
     min-height: 600px;
     overflow: hidden;
+    background-color: var(--navy);
 }
 
 .slide {
@@ -431,35 +474,12 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-size: cover;
-    background-position: center;
-}
-
-.slide::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.15) 0%,
-        rgba(0,0,0,0.45) 100%
-    );
+    background: none;
+    z-index: 2;
 }
 
 .slide.active {
     opacity: 1;
-}
-
-.slide:nth-child(1) {
-    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.5)), var(--dds-hero);
-}
-
-.slide:nth-child(2) {
-    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.5)), var(--dds-hero-alt);
-}
-
-.slide:nth-child(3) {
-    background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.5)), var(--dds-hero-studio);
 }
 
 .slide-content {
@@ -1001,16 +1021,29 @@ a {
     text-align: center;
     padding: 120px 25px 100px;
     color: var(--white);
-    background-color: var(--black);
+    background-color: var(--navy);
     overflow: hidden;
 }
 
-.page-header::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.72)), var(--dds-hero) center/cover;
-    z-index: 0;
+.page-header .bg-video-tint {
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(50, 65, 87, 0.5) 0%,
+            rgba(236, 58, 139, 0.28) 50%,
+            rgba(17, 17, 17, 0.72) 100%
+        );
+}
+
+/* Short headers: bias toward the lower-middle so dancers stay in frame */
+.page-header .bg-video {
+    object-fit: cover;
+    object-position: center 70%;
+}
+
+.page-header .container {
+    position: relative;
+    z-index: 2;
 }
 
 /* ---- Studio Cards (legacy) ---- */
@@ -1216,11 +1249,6 @@ a {
     }
 }
 
-.page-header .container {
-    position: relative;
-    z-index: 1;
-}
-
 .page-header h1 {
     font-family: var(--font-serif);
     font-size: clamp(36px, 5vw, 64px);
@@ -1276,6 +1304,53 @@ a {
     letter-spacing: 1px;
     margin-bottom: 12px;
     text-transform: lowercase;
+}
+
+.schedule-flyer.framed-image--photo {
+    display: block;
+    width: 100%;
+    max-width: none;
+    aspect-ratio: auto;
+    margin: 0 auto 50px;
+    padding: var(--frame-pad);
+    background: var(--white);
+    border: var(--frame-border);
+    box-shadow: var(--frame-shadow);
+}
+
+.schedule-flyer.framed-image--photo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.schedule-flyer.framed-image--photo:hover img {
+    transform: none;
+}
+
+.schedule-notes {
+    max-width: 900px;
+    margin: 45px auto 0;
+    padding-top: 28px;
+    border-top: 1px solid rgba(236, 58, 139, 0.15);
+    color: var(--gray);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.7;
+}
+
+.schedule-notes p {
+    margin-bottom: 10px;
+}
+
+.schedule-notes a {
+    color: var(--accent-dark);
+}
+
+.schedule-tuition {
+    margin-top: 18px;
+    color: var(--charcoal);
 }
 
 .schedule-title {
@@ -1388,8 +1463,10 @@ a {
 }
 
 .timetable-cell {
-    padding: 8px;
-    height: 110px;
+    padding: 0;
+    height: auto;
+    min-height: 110px;
+    vertical-align: top;
     background-color: var(--white);
 }
 
@@ -1397,16 +1474,20 @@ a {
     background-color: #fafafa;
 }
 
+.timetable-cell .timetable-event + .timetable-event {
+    border-top: 1px solid rgba(236, 58, 139, 0.12);
+}
+
 .timetable-event {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
+    height: auto;
     min-height: 90px;
     text-decoration: none;
     color: var(--black);
-    padding: 10px 6px;
+    padding: 12px 8px;
     transition: background-color var(--transition);
 }
 
@@ -1514,12 +1595,19 @@ a {
     color: var(--accent-dark);
 }
 
-.mobile-event-time {
+.mobile-event-time,
+.mobile-event-meta {
     font-family: var(--font-sans);
     font-size: 12px;
     letter-spacing: 1px;
     color: var(--gray);
     white-space: nowrap;
+    text-align: right;
+    margin-left: 16px;
+}
+
+.mobile-day-list li {
+    align-items: flex-start;
 }
 
 @media (max-width: 900px) {
@@ -1782,26 +1870,30 @@ a {
     transition: transform 0.5s ease;
 }
 
-.philosophy-feature-img--silhouette {
+.philosophy-feature-img--silhouette,
+.philosophy-feature-img--outline {
     background-color: var(--white);
-    padding: 0;
+    padding: calc(var(--frame-pad) + 8px);
     overflow: hidden;
 }
 
-.philosophy-feature-img--silhouette img {
+.philosophy-feature-img--silhouette img,
+.philosophy-feature-img--outline img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
     object-position: center;
     background-color: var(--white);
     display: block;
+    image-rendering: auto;
 }
 
 .philosophy-feature:hover .philosophy-feature-img img {
     transform: scale(1.05);
 }
 
-.philosophy-feature:hover .philosophy-feature-img--silhouette img {
+.philosophy-feature:hover .philosophy-feature-img--silhouette img,
+.philosophy-feature:hover .philosophy-feature-img--outline img {
     transform: none;
 }
 
@@ -2022,9 +2114,10 @@ a {
 
 .current-images {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 18px;
-    margin-bottom: 50px;
+    margin: 0 auto 50px;
+    max-width: 720px;
 }
 
 .current-img { position: relative; }
@@ -2228,7 +2321,7 @@ a {
 
 .class-gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 16px;
     margin-bottom: 50px;
     align-items: stretch;
@@ -2325,21 +2418,52 @@ a {
 
 .dress-note {
     max-width: 900px;
-    margin: 0 auto 70px;
-    background-color: var(--gray-light);
+    margin: 0 auto 50px;
+    background-color: var(--accent-light);
     border-left: 4px solid var(--accent);
     padding: 22px 28px;
 }
 
 .dress-note p {
     color: var(--charcoal);
-    font-weight: 300;
+    font-weight: 700;
     line-height: 1.7;
 }
 
 .dress-note strong {
     color: var(--accent-dark);
     letter-spacing: 0.5px;
+    font-weight: 700;
+}
+
+.dress-code-flyers {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 36px;
+    margin: 0 auto 70px;
+    max-width: 980px;
+}
+
+.dress-code-flyer.framed-image--photo {
+    width: 100%;
+    max-width: none;
+    aspect-ratio: auto;
+    margin: 0;
+    padding: var(--frame-pad);
+    background: var(--white);
+    border: var(--frame-border);
+    box-shadow: var(--frame-shadow);
+}
+
+.dress-code-flyer.framed-image--photo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.dress-code-flyer.framed-image--photo:hover img {
+    transform: none;
 }
 
 .dress-text .dress-subnote {
@@ -2760,6 +2884,28 @@ a {
     line-height: 1.7;
 }
 
+.sponsor-featured.framed-image--photo {
+    max-width: 520px;
+    width: 100%;
+    aspect-ratio: auto;
+    margin: 0 auto 40px;
+    padding: var(--frame-pad);
+    background: var(--white);
+    border: var(--frame-border);
+    box-shadow: var(--frame-shadow);
+}
+
+.sponsor-featured.framed-image--photo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+.sponsor-featured.framed-image--photo:hover img {
+    transform: none;
+}
+
 .sponsors-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
@@ -2873,6 +3019,28 @@ a {
 
 .coming-soon a { color: var(--accent-dark); font-weight: 700; }
 
+.recital-date-highlight {
+    margin-bottom: 40px;
+}
+
+.recital-date-when {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 22px;
+    color: var(--accent-dark);
+    margin: 12px 0 18px;
+}
+
+.recital-date-where {
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.recital-venue-map {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
 /* Recital sub-page banner + photos */
 .recital-banner { margin-bottom: -10px; }
 .recital-banner .container { max-width: 1100px; }
@@ -2913,6 +3081,7 @@ a {
 
 .gift-gallery {
     margin-top: 40px;
+    grid-template-columns: repeat(4, 1fr);
 }
 
 .gift-gallery .framed-image--photo {
@@ -2971,6 +3140,41 @@ a {
 
 .troupe-gallery .framed-image--photo img {
     object-fit: cover;
+}
+
+.framed-image--placeholder {
+    display: flex;
+    align-items: stretch;
+}
+
+.framed-image--placeholder .photo-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(160deg, var(--cream) 0%, #f0ebe8 100%);
+    color: var(--gray);
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: clamp(18px, 2.4vw, 28px);
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 20px;
+}
+
+.about-image-block .framed-image--photo.framed-image--placeholder-wide {
+    aspect-ratio: 16 / 9;
+    max-height: 450px;
+}
+
+.about-image-block .framed-image--photo.framed-image--placeholder-wide .photo-placeholder {
+    min-height: 280px;
+}
+
+.framed-image--placeholder:hover {
+    transform: none;
+    box-shadow: var(--frame-shadow);
 }
 
 .troupe-benefits h2, .troupe-requirements h2, .troupe-auditions h2, .troupe-contact h2 {
@@ -3053,7 +3257,34 @@ a {
 
 .gallery-intro p { line-height: 1.9; font-weight: 300; color: var(--gray); }
 
-.gallery-category { margin-bottom: 60px; }
+.gallery-jump {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 18px;
+    margin: 0 auto 50px;
+    max-width: 900px;
+}
+
+.gallery-jump a {
+    font-family: var(--font-sans);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--navy);
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: color var(--transition), border-color var(--transition);
+}
+
+.gallery-jump a:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent);
+}
+
+.gallery-category { margin-bottom: 60px; scroll-margin-top: 100px; }
 
 .gallery-category h2 {
     font-family: var(--font-serif);
@@ -3088,6 +3319,15 @@ a {
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s ease;
+}
+
+.gallery-item--fit img {
+    object-fit: contain;
+    background: var(--white);
+}
+
+.gallery-item--fit:hover img {
+    transform: none;
 }
 
 .gallery-item:hover img {
@@ -3286,6 +3526,103 @@ a {
 }
 
 .hours-note { color: var(--gray); font-style: italic; font-weight: 300; font-size: 14px; }
+
+.visit-section {
+    padding: 90px 25px;
+    background-color: var(--white);
+    border-top: 1px solid rgba(236, 58, 139, 0.1);
+}
+
+.visit-label {
+    display: block;
+    text-align: center;
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 15px;
+    color: var(--accent);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.visit-title {
+    text-align: center;
+    font-family: var(--font-serif);
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: -1px;
+    color: var(--charcoal);
+    margin-bottom: 45px;
+    line-height: 1.2;
+}
+
+.visit-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(240px, 360px) 1fr;
+    gap: 36px;
+    align-items: stretch;
+}
+
+.visit-details .info-item {
+    margin-bottom: 18px;
+}
+
+.visit-details .info-item:last-child {
+    margin-bottom: 0;
+}
+
+.visit-directions {
+    display: inline-block;
+    margin-top: 12px;
+    color: var(--accent-dark);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    font-weight: 700;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 2px;
+    transition: color var(--transition), border-color var(--transition);
+}
+
+.visit-directions:hover {
+    color: var(--accent);
+    border-bottom-color: var(--accent-dark);
+}
+
+.visit-map {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    aspect-ratio: 16 / 10;
+    min-height: 320px;
+    padding: var(--frame-pad);
+}
+
+.visit-map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+}
+
+.directions-section .visit-map {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+@media (max-width: 900px) {
+    .visit-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .visit-map {
+        min-height: 280px;
+        aspect-ratio: 4 / 3;
+    }
+}
 
 .directions-tips h3 {
     font-family: var(--font-serif);
@@ -3584,7 +3921,7 @@ footer .copyright a:hover {
 .home-page {
     --section-max: 1200px;
     --section-pad: clamp(24px, 4vw, 50px);
-    --frame-border: 1px solid var(--accent-light);
+    --frame-border: 3px solid var(--accent-light);
     --frame-shadow: 0 18px 45px rgba(40, 20, 40, 0.14);
     --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
 }
